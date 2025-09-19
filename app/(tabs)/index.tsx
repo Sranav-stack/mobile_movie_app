@@ -26,7 +26,7 @@ export default function Index() {
           className="mt-5 mb-5 mx-auto" 
         />
 
-        <SearchBar/>
+        <SearchBar onPress={()=>router.push("/search")} placeholder="Search for a movie"/>
 
         {Array.from({ length: 20 }).map((_, i) => (
           <View key={i} className="h-20 bg-white my-2 rounded-xl" />
