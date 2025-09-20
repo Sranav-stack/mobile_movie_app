@@ -19,7 +19,7 @@ export const MovieCard = ({
 }: Movie) => {
   return (
     <Link href={`/movie/${String(id)}`} asChild>
-      <TouchableOpacity className="w-full max-w-[140px] bg-yellow-300 rounded-lg overflow-hidden">
+      <TouchableOpacity className="w-full max-w-[140px] rounded-lg overflow-hidden">
         <View className="flex flex-col items-center">
           <Image
             source={{

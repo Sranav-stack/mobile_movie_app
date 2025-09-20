@@ -48,7 +48,7 @@ export default function Index() {
             <FlatList
               data={movies ?? []}
               renderItem={({ item }) => (
-                <View className="flex-1 m-2 bg-pink-400">
+                <View className="flex-1 m-2">
                   <MovieCard
                      {...item}
                   />
@@ -60,8 +60,7 @@ export default function Index() {
                 justifyContent: 'flex-start',
                 gap: 20,
                 paddingRight: 5,
-                marginBottom: 10,
-                backgroundColor: '#222831',                
+                marginBottom: 10,                
               }}
               scrollEnabled={false}
             />
