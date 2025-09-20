@@ -1,3 +1,4 @@
+import { MovieCard } from "@/components/MovieCard";
 import { SearchBar } from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
@@ -47,13 +48,22 @@ export default function Index() {
             <FlatList
               data={movies ?? []}
               renderItem={({ item }) => (
-               <View className="flex-1 m-2">
-                 <Text className="text-white text-center">{item.title}</Text>
-               </View>
+                <View className="flex-1 m-2 bg-pink-400">
+                  <MovieCard
+                     {...item}
+                  />
+                </View>
               )}
               numColumns={3}
               keyExtractor={(item) => item.id.toString()}
-
+              columnWrapperStyle={{
+                justifyContent: 'flex-start',
+                gap: 20,
+                paddingRight: 5,
+                marginBottom: 10,
+                backgroundColor: '#222831',                
+              }}
+              scrollEnabled={false}
             />
           </View>
         )}
