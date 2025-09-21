@@ -43,7 +43,11 @@ export default function Index() {
           <Text className="text-red-500 mt-5">Error: {moviesError.message}</Text>
         ) : (
           <View className="flex-1 mt-5">
-            <SearchBar onPress={() => router.push("/search")} placeholder="Search for a movie" />
+            <SearchBar
+              value=""
+              onPress={() => router.push("/search")}
+              placeholder="Search for a movie"
+            />
             <Text className="mt-5 text-white text-lg font-bold">Latest Movies</Text>
             <FlatList
               data={movies ?? []}
@@ -67,10 +71,6 @@ export default function Index() {
           </View>
         )}
 
-        {/* Temporary placeholder movie list */}
-        {Array.from({ length: 20 }).map((_, i) => (
-          <View key={i} className="h-20 bg-white my-2 rounded-xl" />
-        ))}
       </ScrollView>
     </View>
   );
