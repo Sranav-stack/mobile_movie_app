@@ -9,6 +9,8 @@ import { ActivityIndicator, FlatList, Image, ScrollView, Text, View } from "reac
 
 export default function Index() {
   const router = useRouter();
+  console.log('database',process.env.EXPO_PUBLIC_APPWRITE_DATABASE_ID);
+  console.log('collection',process.env.EXPO_PUBLIC_APPWRITE_COLLECTION_ID);
   const { data: movies, loading: moviesLoading, error: moviesError } = useFetch(() =>
     fetchPopularMovies({ query: "" })
   );

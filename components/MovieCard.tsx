@@ -3,7 +3,7 @@ import { Link } from 'expo-router';
 import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 
-type Movie = {
+export type Movie = {
   id: number;
   poster_path: string;
   title: string;
